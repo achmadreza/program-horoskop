@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program Horoskop</title>
+</head>
+<body>
+    <h2>PROGRAM HOROSKOP</h2>
+    <!-- <button onclick="horo()" class="btn">Click here</button> -->
+    <button onclick="horo()"class ="btn">Click here!</button>
+    <p>Keberuntungan Anda hari ini:</p>
+    <hr/>
+    <div id="program"></div>
+    
+<script>    
+    const horo=()=> {
+        const btnHr=document.querySelector('.btn')
+        const acak= Date.now();
+        const result= acak % 9;
+
+        let par=document.createElement('p');
+
+        // use to make switch
+        // let par2=document.createElement('br')
+
+
+        if(result <3){
+        par.innerHTML="Hebat!!";
+        par.style.color="red";
+    }else if(result >=3 && result < 6){
+        par.innerHTML="Boleh juga!";
+        par.style.color="blue";
+    }else{
+        par.innerHTML="Mengerikan...";
+        par.style.color="green";
+    }
+
+         // 5 Pola
+    //   switch (result) {
+    //     case 0:
+    //       par = "Hebat!!";
+    //       break;
+    //     case 1:
+    //       par = "Luar biasa!";
+    //       break;
+    //     case 2:
+    //       par = "Boleh juga!";
+    //       break;
+    //     case 3:
+    //       par = "Biasa saja";
+    //       break;
+    //     default:
+    //       par = "Mengerikan...";
+    //       break;
+    //   }
+  
+    
+        program.append(par)
+        // program.append(par2)
+        console.log(result)
+        console.log(par)
+    }
+    </script>
+</body>
+</html>
